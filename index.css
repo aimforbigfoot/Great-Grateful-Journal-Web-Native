@@ -21,7 +21,7 @@ d6e0f0:shadows? and everything else
 
 .input-bar{
     background-color: #f1f3f8;
-    padding: 3em;
+    padding: 1em;
     text-align: center;
     align-items: center;
 }
@@ -40,6 +40,13 @@ d6e0f0:shadows? and everything else
     height: 3em;
     border-color: #8d93ab;
     border-radius: 15%;
+}
+
+.warning-text{
+    text-align: center;
+    color: red;
+    height: 26px;
+    font-size: 20px;
 }
 
 .list-of-things{
@@ -72,7 +79,7 @@ d6e0f0:shadows? and everything else
 }
 
 .list-item-button:hover{
-    opacity: 80%;
-    background-color: violet;
+    opacity: 60%;
+    background-color: #d6e0f0;
     display: block;
 }
