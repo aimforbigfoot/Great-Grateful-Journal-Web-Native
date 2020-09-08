@@ -1,0 +1,78 @@
+/*
+back: f1f3f8
+texts : 393b44
+saved: 8d93ab
+d6e0f0:shadows? and everything else
+*/
+
+
+*{
+    background-color: #f1f3f8;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#title{
+    background-color: #f1f3f8;
+    font-size: 4em;
+    margin-top: .1em;
+    text-align: center;
+    font-style: normal;
+}
+
+.input-bar{
+    background-color: #f1f3f8;
+    padding: 3em;
+    text-align: center;
+    align-items: center;
+}
+
+.acc-bar{
+    width: 400px;
+    height: 3em;
+    background-color: white;
+
+}
+
+.sub-btn{
+    
+    cursor: pointer;
+    border-radius: 0;
+    height: 3em;
+    border-color: #8d93ab;
+    border-radius: 15%;
+}
+
+.list-of-things{
+    justify-content: center;
+    margin: auto;
+    text-align: center;
+
+}
+
+
+
+.list-item{
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    padding: 0;
+    text-align: center;
+    margin: 0;
+}
+
+.list-item-text{
+    font-size: 22px;
+    width: 400px;
+    text-align: left;
+}
+
+.list-item-button{
+    opacity: 0%;
+    height: 50px;
+}
+
+.list-item-button:hover{
+    opacity: 80%;
+    background-color: violet;
+    display: block;
+}
