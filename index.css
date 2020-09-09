@@ -6,12 +6,20 @@ d6e0f0:shadows? and everything else
 */
 
 
+:root{
+    --main-bg-color:#f1f3f8;
+    --main-text-color:#393b44;
+    --main-extra-color:#8d93ab;
+    --main-second-color: #d6e0f0;
+}
+
 *{
-    background-color: #f1f3f8;
+    background-color: var(--main-bg-color);
     font-family: Arial, Helvetica, sans-serif;
 }
 
 #title{
+    color: var(--main-second-color);
     font-size: 4em;
     margin-top: .5em;
     text-align: center;
@@ -19,6 +27,7 @@ d6e0f0:shadows? and everything else
 }
 
 header{
+    color: var(--main-second-color);
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -27,11 +36,14 @@ header{
     display: flex;
 }
 .header-text{
+    color: var(--main-second-color);
     margin: 1% 5%;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-    
 }
+
+
+
 .input-bar{
     background-color: transparent;
     position: relative;
@@ -47,16 +59,25 @@ header{
 .acc-bar{
     width: 400px;
     height: 3em;
-    box-shadow: 0px 0px 500px #393b44;
-    background-color: white;
-
+    color: var(--main-second-color);
+    box-shadow: 0px 0px 500px var(--main-extra-color);
+    background-color: var(--main-text-color);
+    border-color: var(--main-second-color);
+    border-radius: 5em;
+    text-indent: 1em;
+    outline: none;
+    border: ridge;
 }
+
+
 
 .sub-btn{
     cursor: pointer;
+    color: var(--main-second-color);
     border-radius: 0;
+    border: ridge;
     height: 3.5em;
-    border-color: #8d93ab;
+    border-color: var(--main-text-color);
 }
 
 .warning-text{
@@ -69,6 +90,7 @@ header{
 .list-of-things{
     justify-content: center;
     margin: auto;
+    color: var(--main-second-color);
     text-align: center;
 
 }
@@ -76,6 +98,7 @@ header{
 
 
 .list-item{
+    color: var(--main-second-color);
     align-content: center;
     justify-content: center;
     display: flex;
@@ -87,6 +110,7 @@ header{
 }
 
 .list-item-text{
+    color: var(--main-second-color);
     font-size: 22px;
     background-color: transparent;
     width: 363px;
@@ -100,7 +124,7 @@ header{
 
 .list-item-button:hover{
     opacity: 60%;
-    background-color: #d6e0f0;
+    background-color: var(--main-second-color);
     display: block;
 }
 
@@ -108,9 +132,10 @@ header{
     justify-content: center;
     align-content: center;
     cursor: pointer;
+    color: var(--main-second-color);
     border-radius: 0;
     height: 3.5em;
-    border-color: #8d93ab;
+    border-color: var(--main-extra-color);
 
 }
 
@@ -118,11 +143,13 @@ header{
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     font-weight: 600;
+    color: var(--main-second-color);
     margin: 1em;
     line-height: 2em;
 }
 
 .default-text-leg{
+    color: var(--main-second-color);
     font-family: Arial, Helvetica, sans-serif;
     text-align: justify;
     font-weight: 500;
@@ -132,6 +159,7 @@ header{
 
 .leg-div{
     
+    color: var(--main-second-color);
     align-content: center;
     justify-content: center;
     text-align: center;
@@ -148,6 +176,7 @@ header{
     justify-content: center;
     font-family: Arial, Helvetica, sans-serif;
     align-items: center;
+    color: var(--main-second-color);
     font-size: 22px;
     align-content: center;
     padding: 0% 5%;

@@ -16,14 +16,25 @@ var dateToPut = ""
 var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 var d = new Date();
 dateToPut = (months[d.getMonth()] + ", " + d.getDate() + ", " + d.getFullYear() )
+var bgColorArr = ["#eoece4", "#1d2d50", "#7d0633","#1a1a2e", "#557571", "#303030","#1b262c", "#fdcb9e", "#221f3b","#7d5a5a", "#202040", "#204051","#000000"];
+var textColorArr= ["#ff4b5c", "#133b5c", "#31112c","#16213e", "#d49a89", "#8fc0a9","#0f4c75", "#f7d6bf", "#6f4a8e","#f1d1d1", "#543864", "#3b6978","#323232"];
+var extraColorArr = ["#056674", "#1e5f74", "#f2a07b","#0f3460", "#f7f1ba", "#c8d5b9","#00b7c2", "#318fb5", "#6f4a8e","#f3e1e1", "#ff6363", "#84a9ac","#ff1e56"];
+var ssecondColorArr = ["#66bfbf", "#fcdab7", "#fbdcc4","#e94560", "#f4f4f4", "#faf3dd","#fdcb9e", "#005086", "#ebebeb","#faf2f2", "#ffbd69", "#cae8d5","#ffac41"];
 
+var randNum =Math.floor(Math.random() * Math.floor(bgColorArr.length));
 
-console.log(dateToPut)
+document.documentElement.style.setProperty("--main-text-color", textColorArr[randNum]);
+document.documentElement.style.setProperty("--main-bg-color", bgColorArr[randNum]);
+document.documentElement.style.setProperty("--main-extra-color", extraColorArr[randNum]);
+document.documentElement.style.setProperty("--main-second-color", ssecondColorArr[randNum]);
+//getComputedStyle(document.documentElement).getPropertyValue("--main-bg-color");
+
+console.log(dateToPut);
 if (listOfEntriesFromSave && arrOfEntries){
-    listOfEntries.innerHTML = listOfEntriesFromSave
+    listOfEntries.innerHTML = listOfEntriesFromSave;
     //console.log(localStorage.getItem("arrOfEntiresSave"));
     
-    entries = arrOfEntries
+    entries = arrOfEntries;
     //console.log(arrOfEntries, entries)
     //entries = arrOfEntires
     //console.log(entries)
