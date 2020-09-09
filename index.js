@@ -5,11 +5,23 @@ const warningText = document.querySelector(".warning-text")
 const listOfItem = document.querySelector(".list-item")
 var listItemText = document.querySelectorAll(".list-item-text")
 const maxCharLength = 40;
+const delBar = document.querySelector(".delBar")
 var activeBtn
 var entries = ["0"];
 var currentID = 0;
+var listOfEntriesFromSave = JSON.parse(localStorage.getItem("listOfEntriesSave"));
+var arrOfEntries = (localStorage.getItem("arrOfEntiresSave"));
+//var arrOfEntires = JSON.parse(localStorage.getItem("arrOfEntires"))
 
-console.log(listItemText)
+if (listOfEntriesFromSave && arrOfEntries){
+    listOfEntries.innerHTML = listOfEntriesFromSave
+    console.log(localStorage.getItem("arrOfEntiresSave"));
+    
+    entries = [arrOfEntries]
+    console.log(arrOfEntries, entries)
+    //entries = arrOfEntires
+    console.log(entries)
+}
 
 bar.addEventListener("keyup", (e) => {
     if (e.key === "Enter"){
@@ -26,7 +38,8 @@ function delClicked (e) {
     //console.log(listOfEntries)
     //entries.splice(e.parentElement.id-1,1)
     e.parentElement.remove()
-    console.log(entries)
+    //console.log(entries)
+    updateLS()
 }
 
 
@@ -37,9 +50,7 @@ function submit_btn_func() {
         entries.push(text)
         bar.value = "";
         listOfEntries.innerHTML = `<div id="${entries.length}" class="list-item"><p class="list-item-text">${text}</p><button class="list-item-button" onclick="delClicked(this)">Delete</button></div>` + listOfEntries.innerHTML;
-    
-    console.log(listItemText)
-    console.log(entries);
+        updateLS()
     } else if (bar.value.length >= maxCharLength){
         const errText = `Exceded character amount of ${maxCharLength}`
         show_error_text(errText)
@@ -56,7 +67,7 @@ function submit_btn_func() {
 }
 
 function show_error_text(errTextVar) {
-    console.log(errTextVar);
+    //console.log(errTextVar);
     warningText.innerHTML = errTextVar
 
     window.setTimeout(() => {warningText.innerHTML = " "},5000)
@@ -66,12 +77,37 @@ function show_error_text(errTextVar) {
 function hasNotBeenSaidBefore(val) {
     let state = true
     for (i = 0; i < entries.length; i++  ) {
+    console.log(entries[i])
         if (entries[i] == val ){
             state = false
             show_error_text("You have already said that before")
         }
     }
-    console.log(val, "checker")
+    //console.log(val, "checker")
     return state
 
+}
+
+
+function homebtnpressed(){
+    window.location.href = "../index.html"
+}
+
+function updateLS() {
+    //console.log(listOfEntries.innerHTML)
+    const alltheHtml = listOfEntries.innerHTML
+    localStorage.setItem("listOfEntriesSave", JSON.stringify(alltheHtml))
+    localStorage.setItem("arrOfEntiresSave", (entries))
+    //console.log(localStorage.getItem("arrOfEntires"))
+}
+
+
+function checkanddelete() {
+    if (delBar.value === "DeLeTe"){
+        delBar.value = "Done, all gone"
+        //console.log("confirmation of delete")
+        localStorage.clear
+        listOfEntries.innerHTML = ""
+    }
+    //console.log(delBar.value)
 }
