@@ -83,17 +83,18 @@ header{
     text-align: center;
     margin: 0;
     background-color: transparent;
+    vertical-align: center;
 }
 
 .list-item-text{
     font-size: 22px;
     background-color: transparent;
-    width: 400px;
+    width: 363px;
     text-align: left;
 }
 
 .list-item-button{
-    opacity: 0%;
+    opacity: 10%;
     height: 50px;
 }
 
@@ -140,4 +141,15 @@ header{
 
 .delBar{
     background-color: red;
+}
+
+.date-text{
+    vertical-align: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    align-items: center;
+    font-size: 22px;
+    align-content: center;
+    padding: 0% 5%;
+    text-align: left;
 }
